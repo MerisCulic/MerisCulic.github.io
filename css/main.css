@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #b7c0c5;
+  font-family: "Urbanist", sans-serif; }
+
+@keyframes unlockScroll {
+  from {
+    overflow: hidden; }
+  to {
+    overflow: visible; } }
+
+@keyframes hideLeft {
+  from {
+    left: 0; }
+  to {
+    left: -60vw; } }
+
+@keyframes hideRight {
+  from {
+    right: 0; }
+  to {
+    right: -60vw; } }
+
+@keyframes fadeInFactBox {
+  from {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none; }
+  to {
+    background-color: white; } }
+
+@keyframes changeColor {
+  from {
+    color: #000; }
+  to {
+    color: #fff; } }
+
+@keyframes moveUp {
+  from {
+    top: 50%; }
+  to {
+    top: 10%; } }
+
+@keyframes factNumberShow {
+  0% {
+    visibility: hidden; }
+  1% {
+    visibility: visible;
+    font-size: 200px;
+    opacity: 0.4; }
+  10% {
+    font-size: 220px;
+    opacity: 0.6; }
+  100% {
+    font-size: 100px;
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    visibility: hidden; }
+  1% {
+    visibility: visible;
+    opacity: 0.1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes resizeHeader {
+  to {
+    height: 85vh; } }
+
+.introTitle {
+  position: relative;
+  top: 15%;
+  font-size: 40px;
+  font-weight: 300;
+  animation: fadeIn 1s backwards 1s ease-in-out; }
+
+.introSubTitle {
+  font-weight: 250;
+  font-size: 30px;
+  animation: fadeIn 1s backwards 0.5s ease-in-out; }
+
+.pa-logo {
+  height: 300px; }
+
+.ms-logo {
+  height: 22px;
+  width: 22px; }
+
+.footer-logo {
+  height: 150px; }
+
+.header-facts h1 {
+  font-size: 100px;
+  color: #e21c1cda; }
+
+.header-facts p {
+  font-size: 30px;
+  width: 20vw; }
+
+.blue-bg {
+  color: #fff;
+  background-color: #3e78c2; }
+
+.light-gray-bg {
+  color: #000;
+  background-color: #b7c0c5; }
+
+.benefit-box {
+  width: 20vw;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; }
+
+.video {
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .video-frame {
+    width: 60vw;
+    height: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 5px; }
+
+html, body {
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+  animation: 0.1s unlockScroll forwards 4s; }
+
+.flex {
+  display: flex;
+  align-items: center; }
+
+.landing {
+  color: #fff; }
+  .landing-left {
+    width: 50%;
+    height: 100%;
+    background-color: #3e78c2;
+    position: fixed;
+    z-index: 3;
+    transition: cubic-bezier(1, 0, 0, 1);
+    left: 0;
+    animation: hideLeft 2s forwards 2s; }
+    .landing-left h1 {
+      position: relative;
+      width: fit-content;
+      margin-left: auto; }
+  .landing-right {
+    width: 50%;
+    height: 100%;
+    background-color: #3e78c2;
+    position: fixed;
+    z-index: 3;
+    transition: cubic-bezier(1, 0, 0, 1);
+    right: 0;
+    animation: hideRight 2s forwards 2s; }
+    .landing-right h1 {
+      left: 0; }
+  .landing-logo-left {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-60%, -50%);
+    z-index: 4; }
+  .landing-logo-right {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 5; }
+
+.header {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-color: #b7c0c5;
+  animation: resizeHeader 1s forwards 8s; }
+  .header-slogan-one {
+    position: relative;
+    font-size: 50px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: changeColor 2s forwards 2s, moveUp 1s forwards 4s; }
+  .header-slogan-two {
+    color: #fff;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: start;
+    font-size: 30px;
+    animation: fadeIn 1s backwards 7s; }
+  .header-facts {
+    position: relative;
+    z-index: 2;
+    top: 30%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5vw 10vw;
+    grid-template-rows: auto auto;
+    padding: 5vw; }
+    .header-facts-one {
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      animation: fadeInFactBox 1s backwards ease-in-out 6s; }
+      .header-facts-one-number {
+        animation: factNumberShow 1s backwards ease-in-out 4.5s; }
+      .header-facts-one-text {
+        animation: fadeIn 1s backwards ease-in-out 5.5s; }
+    .header-facts-two {
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      animation: fadeInFactBox 1s backwards ease-in-out 6.5s; }
+      .header-facts-two-number {
+        animation: factNumberShow 1s backwards ease-in-out 5s; }
+      .header-facts-two-text {
+        animation: fadeIn 1s backwards ease-in-out 6s; }
+    .header-facts-three {
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      animation: fadeInFactBox 1s backwards ease-in-out 7s; }
+      .header-facts-three-number {
+        animation: factNumberShow 1s backwards ease-in-out 5.5s; }
+      .header-facts-three-text {
+        animation: fadeIn 1s backwards ease-in-out 6.5s; }
+
+.main-section-one {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: table;
+  background-image: url("../Images/pa3.jpg"); }
+
+.main-section-two {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: table;
+  background-image: url("../Images/pa2.png"); }
+
+.main-section-three {
+  background-color: #b7c0c5;
+  color: #000; }
+
+.main-scroll {
+  padding: 4vh 10vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; }
+  .main-scroll-title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 50px;
+    padding: 20px 30px; }
+    .main-scroll-title-sub {
+      font-size: 30px;
+      padding-bottom: 10px; }
+  .main-scroll-paragraph {
+    font-size: 25px; }
+    .main-scroll-paragraph-sm {
+      font-size: 20px; }
+  .main-scroll-image {
+    height: 400px;
+    width: 450px;
+    transition: 0.5s ease-in-out; }
+    .main-scroll-image:hover {
+      transform: scale(1.4); }
+  .main-scroll-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 5vw 10vw;
+    padding: 2vw; }
+    .main-scroll-grid-one {
+      grid-column-start: 1;
+      grid-column-end: 2; }
+    .main-scroll-grid-two {
+      grid-column-start: 2;
+      grid-column-end: 3; }
+    .main-scroll-grid-three-one {
+      grid-column-start: 3;
+      grid-column-end: 4; }
+  .main-scroll-flex {
+    height: fit-content;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; }
+
+.footer {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  display: table;
+  height: fit-content;
+  background-color: #838b8f; }
+  .footer-logo {
+    transition: 0.5s ease-in-out; }
+    .footer-logo:hover {
+      transform: scale(1.1); }

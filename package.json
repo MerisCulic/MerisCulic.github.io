@@ -1,0 +1,11 @@
+{
+  "name": "power-apps-presentation",
+  "version": "1.0.0",
+  "description": "Microsoft's Power Apps presentation website",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass -o css scss -w"
+  },
+  "author": "Meris Čulić",
+  "license": "ISC"
+}

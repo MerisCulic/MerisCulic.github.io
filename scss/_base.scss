@@ -1,0 +1,124 @@
+// Colors
+$color-red:#e21c1cda;
+$color-black: #000;
+$color-white: #fff;
+$color-light-blue: rgba(62,120,194,1);
+$color-light-gray: rgb(183, 192, 197);
+$color-gray: rgb(131, 139, 143);
+
+// Fonts
+$font-urbanist: 'Urbanist', sans-serif;
+$font-josefinSans: 'Josefin Sans', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $color-light-gray;
+    font-family: $font-urbanist;
+}
+
+// Mixins
+@mixin mainImagePlacement {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    display: table;    
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centering($topValue: 50%) {
+    position: absolute;
+    top: $topValue;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin shadowedWhiteBox {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $color-white;
+    box-shadow: 
+        rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+@mixin boxShadow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@mixin grid($cols, $rows) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    grid-template-rows: repeat($rows,1fr);
+    gap: 5vw 10vw;
+}
+
+@mixin halfOfScreen {
+    width: 50%;
+    height: 100%;
+    background-color: $color-light-blue;
+    position: fixed;
+    z-index: 3;
+    transition: cubic-bezier(1, 0, 0, 1);
+}
+
+// Animations
+@keyframes unlockScroll {
+    from { overflow: hidden;}
+    to {overflow: visible;}
+}
+
+@keyframes hideLeft {
+    from {left: 0}
+    to {left: -60vw}
+}
+
+@keyframes hideRight {
+    from {right: 0}
+    to {right: -60vw}
+}
+
+@keyframes fadeInFactBox {
+    from {background-color: rgba($color-white, 0); box-shadow: none; }
+    to {background-color: rgba($color-white, 1)}
+}
+
+@keyframes changeColor {
+    from {color: $color-black;}
+    to {color: $color-white;}
+}
+
+@keyframes moveUp {
+    from {top: 50%}
+    to {top: 10%}
+}
+
+@keyframes factNumberShow {
+    0% {visibility: hidden;}
+    1% {visibility: visible; font-size: 200px; opacity: 0.4;}
+    10% {font-size: 220px; opacity: 0.6;}
+    100% {font-size: 100px; opacity: 1;}
+}
+
+@keyframes fadeIn {
+    0% {visibility: hidden;}
+    1% {visibility: visible; opacity: 0.1;}
+    100% {opacity: 1;}
+}
+
+@keyframes resizeHeader {
+    to {height: 85vh;}
+}

@@ -1,0 +1,65 @@
+.introTitle {
+    position: relative;
+    top: 15%;
+    font-size: 40px;
+    font-weight: 300;
+    animation: fadeIn 1s backwards 1s ease-in-out;
+}
+
+.introSubTitle {
+    font-weight: 250;
+    font-size: 30px;
+    animation: fadeIn 1s backwards 0.5s ease-in-out;
+}
+
+.pa-logo {
+    height: 300px;
+}
+
+.ms-logo {
+    height: 22px;
+    width: 22px;
+}
+
+.footer-logo {
+    height: 150px;
+}
+
+.header-facts h1 {
+    font-size: 100px;
+    color: $color-red;
+}
+
+.header-facts p {
+    font-size: 30px;
+    width: 20vw;
+}
+
+.blue-bg {
+    color: $color-white;
+    background-color: $color-light-blue;
+}
+
+.light-gray-bg {
+    color: $color-black;
+    background-color: $color-light-gray;
+}
+
+.benefit-box {
+    width: 20vw;
+    background-color: $color-white;
+    border-radius: 10px;
+    padding: 15px;
+    @include boxShadow;
+}
+
+.video {
+    padding: 70px; 
+    @include flexCenter;
+    &-frame {
+        width: 60vw;
+        height: 500px;
+        @include shadowedWhiteBox;
+        padding: 5px; 
+    }
+}

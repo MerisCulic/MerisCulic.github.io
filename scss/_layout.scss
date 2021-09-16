@@ -1,0 +1,203 @@
+html, body {
+    height: 100%;
+    width: 100vw;
+    // Temp. scroll lock for landing anim.
+    overflow: hidden; 
+    animation: 0.1s unlockScroll forwards 4s;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.landing {
+    color: $color-white;
+    &-left {
+        @include halfOfScreen;
+        left: 0;
+        animation: hideLeft 2s forwards 2s;
+        & h1 {
+            position: relative;
+            width: fit-content;
+            margin-left: auto;
+        }
+    }
+    &-right {
+        @include halfOfScreen;
+        right: 0;
+        animation: hideRight 2s forwards 2s;
+        & h1 {
+            left: 0;
+        }
+    }
+    &-logo {
+        &-left {
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translate(-60%, -50%);
+            z-index: 4;
+        }
+        &-right {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+        }
+    }
+}
+
+.header {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background-color: $color-light-gray;
+    animation: resizeHeader 1s forwards 8s;
+
+    &-slogan {
+        &-one {
+            position:relative;
+            font-size: 50px;
+            color: $color-white;
+            @include centering;
+            animation: 
+                changeColor 2s forwards 2s,
+                moveUp 1s forwards 4s;
+        }
+        &-two {
+            color: $color-white;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            align-self: start;
+            font-size: 30px;
+            animation: 
+                fadeIn 1s backwards 7s;
+        }
+    }
+
+    &-facts {
+        position: relative;
+        z-index: 2;
+        top: 30%;
+        @include grid(3,2);
+        grid-template-rows: auto auto;
+        padding: 5vw;
+        &-one {
+            @include shadowedWhiteBox;
+            animation: fadeInFactBox 1s backwards ease-in-out 6s;
+            &-number {
+                animation: factNumberShow 1s backwards ease-in-out 4.5s;
+            }
+            &-text {
+                animation: fadeIn 1s backwards ease-in-out 5.5s;
+            }
+        }
+        &-two {
+            @include shadowedWhiteBox;
+            animation: fadeInFactBox 1s backwards ease-in-out 6.5s;
+            &-number {
+                animation: factNumberShow 1s backwards ease-in-out 5s;
+            }
+            &-text {
+                animation: fadeIn 1s backwards ease-in-out 6s;
+            }
+        }
+        &-three {
+            @include shadowedWhiteBox;
+            animation: fadeInFactBox 1s backwards ease-in-out 7s;
+            &-number {
+                animation: factNumberShow 1s backwards ease-in-out 5.5s;
+            }
+            &-text {
+                animation: fadeIn 1s backwards ease-in-out 6.5s;
+            }
+        }
+    }
+}
+
+.main {
+    &-section {
+        &-one {
+            @include mainImagePlacement;
+            background-image: url("../Images/pa3.jpg");
+        }
+        &-two {
+            @include mainImagePlacement;
+            background-image: url("../Images/pa2.png");
+        }
+        &-three {
+            background-color: $color-light-gray;
+            color: $color-black;
+        }
+    }
+
+    &-scroll {
+        padding: 4vh 10vw;
+        @include boxShadow;
+        &-title {
+            font-family: $font-josefinSans;
+            font-size: 50px;
+            padding: 20px 30px;
+            &-sub {
+                font-size: 30px;
+                padding-bottom: 10px;
+            }
+        }
+        &-paragraph {
+            font-size: 25px;
+            &-sm {
+                font-size: 20px;
+            }
+        }
+        &-image {
+            height: 400px;
+            width: 450px;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                transform: scale(1.4);
+            }
+        }
+
+        &-grid {
+            @include grid(3,1);
+            padding: 2vw;
+            &-one {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            &-two {
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+            &-three {
+                &-one {
+                    grid-column-start: 3;
+                    grid-column-end: 4;
+                }
+            }
+        }
+        &-flex {
+            height: fit-content;
+            padding-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+    }  
+}
+
+.footer {
+    @include mainImagePlacement;
+    height: fit-content;
+    background-color: $color-gray;
+    &-logo {
+        transition: 0.5s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
