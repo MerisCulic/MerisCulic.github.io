@@ -7,6 +7,14 @@
     "start": "node-sass -o css scss -w",
     "postinstall": "npm rebuild node-sass && npm install --unsafe-perm -f node-sass"
   },
+  "engines": {
+    "node": "14.x"
+  },
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "node-sass": "^6.0.1"
+  },
   "author": "Meris Čulić",
   "license": "ISC"
 }
