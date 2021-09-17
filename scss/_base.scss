@@ -83,12 +83,12 @@ body {
 
 @keyframes hideLeft {
     from {left: 0}
-    to {left: -60vw}
+    to {left: -70vw}
 }
 
 @keyframes hideRight {
     from {right: 0}
-    to {right: -60vw}
+    to {right: -70vw}
 }
 
 @keyframes fadeInFactBox {
@@ -108,9 +108,9 @@ body {
 
 @keyframes factNumberShow {
     0% {visibility: hidden;}
-    1% {visibility: visible; font-size: 200px; opacity: 0.4;}
-    10% {font-size: 220px; opacity: 0.6;}
-    100% {font-size: 100px; opacity: 1;}
+    1% {visibility: visible; font-size: scale(2); opacity: 0.4;}
+    10% {font-size: scale(2.1); opacity: 0.6;}
+    100% {font-size: scale(1); opacity: 1;}
 }
 
 @keyframes fadeIn {

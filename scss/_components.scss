@@ -4,16 +4,34 @@
     font-size: 40px;
     font-weight: 300;
     animation: fadeIn 1s backwards 1s ease-in-out;
+
+    @media (max-width: 1400px) {
+        font-size: 35px;
+    }
+    @media (max-width: 1100px) {
+        font-size: 32px;
+    }
 }
 
 .introSubTitle {
     font-weight: 250;
     font-size: 30px;
     animation: fadeIn 1s backwards 0.5s ease-in-out;
+
+    @media (max-width: 1400px) {
+        font-size: 25px;
+    }
+    @media (max-width: 1100px) {
+        font-size: 22px;
+    }
 }
 
 .pa-logo {
     height: 300px;
+
+    @media (max-width: 1000px) {
+        height: 250px;
+    }
 }
 
 .ms-logo {
@@ -28,11 +46,28 @@
 .header-facts h1 {
     font-size: 100px;
     color: $color-red;
+
+    @media (max-width: 1400px) {
+        font-size: 80px;
+    }
+    @media (max-width: 1100px) {
+        font-size: 65px;
+    }
 }
 
 .header-facts p {
     font-size: 30px;
     width: 20vw;
+
+    @media (max-width: 1400px) {
+        font-size: 25px;
+    }
+    @media (max-width: 1100px) {
+        font-size: 22px;
+    }
+    @media (max-width: 860px) {
+        font-size: 20px;
+    }
 }
 
 .blue-bg {
@@ -61,5 +96,14 @@
         height: 500px;
         @include shadowedWhiteBox;
         padding: 5px; 
+
+        @media (max-width: 1000px) {
+            width: 80vw;
+            height: 450px;
+        }
+        @media (max-width: 860px) {
+            width: 90vw;
+            height: 450px;
+        }
     }
 }
