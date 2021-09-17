@@ -4,7 +4,7 @@
   "description": "Microsoft's Power Apps presentation website",
   "main": "index.js",
   "scripts": {
-    "watch": "node-sass -o css scss -w",
+    "start": "node-sass -o css scss -w",
     "postinstall": "npm rebuild node-sass && npm install --unsafe-perm -f node-sass"
   },
   "author": "Meris Čulić",
