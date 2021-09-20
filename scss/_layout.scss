@@ -1,7 +1,6 @@
 html, body {
     height: 100%;
-    width: 100vw;
-    overflow-x: hidden;
+    width: 100%;
     // Temp. scroll lock for landing anim.
     overflow: hidden; 
     animation: 0.1s unlockScroll forwards 4s;
@@ -102,21 +101,27 @@ html, body {
                 font-size: 20px;
             }
             @media (max-width: 580px) {
-                font-size: 185px;
+                font-size: 18px;
             }
         }
     }
 
     &-facts {
         position: relative;
-        z-index: 2;
         top: 30%;
         @include grid(3,2);
         grid-template-rows: auto auto;
         padding: 5vw;
 
         @media (max-width: 860px) {
-            padding: 3vw
+            display: block;
+            top: 20%;
+        }
+        @media (max-width: 580px) {
+            top: 15%;
+        }
+        @media (max-width: 320px) {
+            top: 30px;
         }
         &-one {
             @include shadowedWhiteBox;
@@ -157,15 +162,16 @@ html, body {
             @include mainImagePlacement;
             background-image: url("../Images/pa3.jpg");
             @media (max-width: 950px) {
-                height: 50vh;
+                background-image: url("../Images/example1.png");
             }
         }
         &-two {
             @include mainImagePlacement;
             background-image: url("../Images/pa2.png");
             @media (max-width: 950px) {
-                height: 50vh;
+                background-image: url("../Images/example2.png");
             }
+            
         }
         &-three {
             background-color: $color-light-gray;
@@ -180,6 +186,10 @@ html, body {
         @media (max-width: 950px) {
             padding: 20px 10px;
         }
+        @media (max-width: 580px) {
+            padding: 10px 10px;
+        }
+        
         &-title {
             font-family: $font-josefinSans;
             font-size: 50px;
@@ -263,8 +273,8 @@ html, body {
                 height: 300px;
                 width: 350px;
             }
-            @media (max-width: 690px) {
-                width: 70%;
+            @media (max-width: 680px) {
+                width: 100%;
                 height: auto;
             }
             
@@ -308,6 +318,9 @@ html, body {
             @media (max-width: 680px) {
                 gap: 15px;
             }
+            @media (max-width: 580px) {
+                display: block;
+            }
         }
     }  
 }
@@ -323,4 +336,3 @@ html, body {
         }
     }
 }
-

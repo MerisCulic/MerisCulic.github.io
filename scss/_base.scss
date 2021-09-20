@@ -29,7 +29,10 @@ body {
     height: 100vh;
     width: 100vw;
     text-align: center;
-    display: table;    
+    display: table;
+    @media (max-width: 950px) {
+        background-size: contain;
+    }    
 }
 
 @mixin flexCenter {
@@ -39,7 +42,6 @@ body {
 }
 
 @mixin centering($topValue: 50%) {
-    position: absolute;
     top: $topValue;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -53,6 +55,14 @@ body {
         rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
         rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    @media (max-width: 860px) {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    @media (max-width: 580px) {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 @mixin boxShadow {
@@ -77,22 +87,22 @@ body {
 
 // Animations
 @keyframes unlockScroll {
-    from { overflow: hidden;}
+    from {overflow: hidden;}
     to {overflow: visible;}
 }
 
 @keyframes hideLeft {
-    from {left: 0}
-    to {left: -70vw}
+    from {left: 0;}
+    to {left: -80vw; visibility: hidden;}
 }
 
 @keyframes hideRight {
-    from {right: 0}
-    to {right: -70vw}
+    from {right: 0;}
+    to {right: -80vw; visibility: hidden;}
 }
 
 @keyframes fadeInFactBox {
-    from {background-color: rgba($color-white, 0); box-shadow: none; }
+    from {background-color: rgba($color-white, 0); box-shadow: none;}
     to {background-color: rgba($color-white, 1)}
 }
 

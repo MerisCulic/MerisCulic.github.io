@@ -11,6 +11,9 @@
     @media (max-width: 1100px) {
         font-size: 32px;
     }
+    @media (max-height: 580px) {
+        font-size: 22px;
+    }
 }
 
 .introSubTitle {
@@ -32,6 +35,9 @@
     @media (max-width: 1000px) {
         height: 250px;
     }
+    @media (max-height: 580px) {
+        height: 150px;
+    }
 }
 
 .ms-logo {
@@ -41,6 +47,9 @@
 
 .footer-logo {
     height: 150px;
+    @media (max-width: 580px) {
+        height: 100px;
+    }
 }
 
 .header-facts h1 {
@@ -53,11 +62,16 @@
     @media (max-width: 1100px) {
         font-size: 65px;
     }
+    @media (max-width: 860px) {
+        font-size: 45px;
+    }
+    @media (max-width: 580px) {
+        font-size: 35px;
+    }
 }
 
 .header-facts p {
     font-size: 30px;
-    width: 20vw;
 
     @media (max-width: 1400px) {
         font-size: 25px;
@@ -67,6 +81,9 @@
     }
     @media (max-width: 860px) {
         font-size: 20px;
+    }
+    @media (max-width: 580px) {
+        font-size: 18px;
     }
 }
 
@@ -86,6 +103,10 @@
     border-radius: 10px;
     padding: 15px;
     @include boxShadow;
+    @media (max-width: 580px) {
+        width: auto;
+        margin-bottom: 15px;
+    }
 }
 
 .video {
