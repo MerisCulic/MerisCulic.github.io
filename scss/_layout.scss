@@ -3,7 +3,7 @@ html, body {
     width: 100%;
     // Temp. scroll lock for landing anim.
     overflow: hidden; 
-    animation: 0.1s unlockScroll forwards 4s;
+    animation: 0.1s unlock-scroll forwards 4s;
 }
 
 .flex {
@@ -17,9 +17,9 @@ html, body {
 .landing {
     color: $color-white;
     &-left {
-        @include halfOfScreen;
+        @include half-of-screen;
         left: 0;
-        animation: hideLeft 2s forwards 2s;
+        animation: hide-left 2s forwards 2s;
         & h1 {
             position: relative;
             width: fit-content;
@@ -27,9 +27,9 @@ html, body {
         }
     }
     &-right {
-        @include halfOfScreen;
+        @include half-of-screen;
         right: 0;
-        animation: hideRight 2s forwards 2s;
+        animation: hide-right 2s forwards 2s;
         & h1 {
             left: 0;
         }
@@ -57,52 +57,27 @@ html, body {
     width: 100vw;
     text-align: center;
     background-color: $color-light-gray;
-    animation: resizeHeader 1s forwards 8s;
+    animation: resize-header 1s forwards 8s;
 
     &-slogan {
         &-one {
             position:relative;
-            font-size: 50px;
+            padding: 0 1rem;
+            font-size: 2.8rem;
             color: $color-white;
             @include centering;
             animation: 
-                changeColor 2s forwards 2s,
-                moveUp 1s forwards 4s;
-            
-            @media (max-width: 1400px) {
-                font-size: 40px;
-            }
-            @media (max-width: 1100px) {
-                font-size: 35px;
-            }
-            @media (max-width: 860px) {
-                font-size: 30px;
-            }
-            @media (max-width: 580px) {
-                font-size: 25px;
-            }
+                change-color 2s forwards 2s,
+                move-up 1s forwards 4s;
         }
         &-two {
             color: $color-white;
             grid-column-start: 1;
             grid-column-end: 4;
             align-self: start;
-            font-size: 30px;
+            font-size: 2rem;
             animation: 
-                fadeIn 1s backwards 7s;
-            
-            @media (max-width: 1400px) {
-                font-size: 25px;
-            }
-            @media (max-width: 1100px) {
-                font-size: 22px;
-            }
-            @media (max-width: 860px) {
-                font-size: 20px;
-            }
-            @media (max-width: 580px) {
-                font-size: 18px;
-            }
+                fade-in 1s backwards 7s;
         }
     }
 
@@ -113,44 +88,38 @@ html, body {
         grid-template-rows: auto auto;
         padding: 5vw;
 
-        @media (max-width: 860px) {
-            display: block;
-            top: 20%;
-        }
         @media (max-width: 580px) {
-            top: 15%;
-        }
-        @media (max-width: 320px) {
-            top: 30px;
+            display: block;
+            top: 3.5rem;
         }
         &-one {
-            @include shadowedWhiteBox;
-            animation: fadeInFactBox 1s backwards ease-in-out 6s;
+            @include shadowed-white-box;
+            animation: fade-in-fact-box 1s backwards ease-in-out 6s;
             &-number {
-                animation: factNumberShow 1s backwards ease-in-out 4.5s;
+                animation: fade-in-fact-number 1s backwards ease-in-out 4.5s;
             }
             &-text {
-                animation: fadeIn 1s backwards ease-in-out 5.5s;
+                animation: fade-in 1s backwards ease-in-out 5.5s;
             }
         }
         &-two {
-            @include shadowedWhiteBox;
-            animation: fadeInFactBox 1s backwards ease-in-out 6.5s;
+            @include shadowed-white-box;
+            animation: fade-in-fact-box 1s backwards ease-in-out 6.5s;
             &-number {
-                animation: factNumberShow 1s backwards ease-in-out 5s;
+                animation: fade-in-fact-number 1s backwards ease-in-out 5s;
             }
             &-text {
-                animation: fadeIn 1s backwards ease-in-out 6s;
+                animation: fade-in 1s backwards ease-in-out 6s;
             }
         }
         &-three {
-            @include shadowedWhiteBox;
-            animation: fadeInFactBox 1s backwards ease-in-out 7s;
+            @include shadowed-white-box;
+            animation: fade-in-fact-box 1s backwards ease-in-out 7s;
             &-number {
-                animation: factNumberShow 1s backwards ease-in-out 5.5s;
+                animation: fade-in-fact-number 1s backwards ease-in-out 5.5s;
             }
             &-text {
-                animation: fadeIn 1s backwards ease-in-out 6.5s;
+                animation: fade-in 1s backwards ease-in-out 6.5s;
             }
         }
     }
@@ -159,14 +128,14 @@ html, body {
 .main {
     &-section {
         &-one {
-            @include mainImagePlacement;
+            @include main-image-bg;
             background-image: url("../Images/pa3.jpg");
             @media (max-width: 950px) {
                 background-image: url("../Images/example1.png");
             }
         }
         &-two {
-            @include mainImagePlacement;
+            @include main-image-bg;
             background-image: url("../Images/pa2.png");
             @media (max-width: 950px) {
                 background-image: url("../Images/example2.png");
@@ -180,106 +149,34 @@ html, body {
     }
 
     &-scroll {
-        padding: 4vh 10vw;
-        @include boxShadow;
-
+        padding: 2rem 5rem;
+        @include box-shadow;
         @media (max-width: 950px) {
-            padding: 20px 10px;
+            padding: 1.8rem 1rem;
         }
-        @media (max-width: 580px) {
-            padding: 10px 10px;
-        }
-        
         &-title {
             font-family: $font-josefinSans;
-            font-size: 50px;
-            padding: 20px 30px;
-
-            @media (max-width: 1400px) {
-                font-size: 40px;
-            }
-            @media (max-width: 1100px) {
-                font-size: 35px;
-            }
-            @media (max-width: 860px) {
-                font-size: 30px;
-            }
-            @media (max-width: 680px) {
-                font-size: 25px;
-                padding: 15px 20px;
-            }
+            font-size: 3rem;
+            padding: 1.25rem 2rem;
             &-sub {
-                font-size: 30px;
+                font-size: 1.7rem;
                 padding-bottom: 10px;
-
-                @media (max-width: 1400px) {
-                    font-size: 25px;
-                }
-                @media (max-width: 1100px) {
-                    font-size: 22px;
-                }
-                @media (max-width: 860px) {
-                    font-size: 20px;
-                }
-                @media (max-width: 580px) {
-                    font-size: 17px;
-                }
             }
         }
         &-paragraph {
-            font-size: 25px;
-
-            @media (max-width: 1400px) {
-                font-size: 20px;
-            }
-            @media (max-width: 1100px) {
-                font-size: 18px;
-            }
-            @media (max-width: 860px) {
-                font-size: 16px;
-            }
-            @media (max-width: 580px) {
-                font-size: 14px;
-            }
+            font-size: 1.5rem;
             &-sm {
-                font-size: 20px;
-                @media (max-width: 1400px) {
-                    font-size: 18px;
-                }
-                @media (max-width: 1100px) {
-                    font-size: 16px;
-                }
-                @media (max-width: 860px) {
-                    font-size: 14px;
-                }
-                @media (max-width: 580px) {
-                    font-size: 12px;
-                }
+                font-size: 1.25rem;
             }
         }
         &-image {
-            height: 400px;
-            width: 450px;
-            transition: 0.5s ease-in-out;
-            &:hover {
-                transform: scale(1.4);
-            }
-
-            @media (max-width: 1400px) {
-                height: 350px;
-                width: 400px;
-            }
-            @media (max-width: 950px) {
-                height: 300px;
-                width: 350px;
-            }
+            height: 25rem;
+            width: 28rem;
             @media (max-width: 680px) {
                 width: 100%;
                 height: auto;
             }
-            
         }
-
         &-grid {
             @include grid(3,1);
             padding: 2vw;
@@ -302,19 +199,14 @@ html, body {
                     grid-column-end: 4;
                 }
             }
-            
         }
         &-flex {
             height: fit-content;
             padding-top: 30px;
             display: flex;
             justify-content: center;
-            gap: 50px;
+            gap: 3.125rem;
             flex-wrap: wrap;
-
-            @media (max-width: 1100px) {
-                gap: 40px;
-            }
             @media (max-width: 680px) {
                 gap: 15px;
             }
@@ -326,7 +218,7 @@ html, body {
 }
 
 .footer {
-    @include mainImagePlacement;
+    @include main-image-bg;
     height: fit-content;
     background-color: $color-gray;
     &-logo {

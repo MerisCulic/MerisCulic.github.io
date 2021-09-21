@@ -2,64 +2,79 @@
   margin: 0;
   padding: 0; }
 
+html {
+  font-size: 100%; }
+  @media (max-width: 1400px) {
+    html {
+      font-size: 87.5%; } }
+  @media (max-width: 1100px) {
+    html {
+      font-size: 75%; } }
+  @media (max-height: 860px) {
+    html {
+      font-size: 62.5%; } }
+  @media (max-height: 580px) {
+    html {
+      font-size: 50%; } }
+
 body {
   background-color: #b7c0c5;
   font-family: "Urbanist", sans-serif; }
 
-@keyframes unlockScroll {
+@keyframes unlock-scroll {
   from {
     overflow: hidden; }
   to {
     overflow: visible; } }
 
-@keyframes hideLeft {
+@keyframes hide-left {
   from {
     left: 0; }
   to {
     left: -80vw;
     visibility: hidden; } }
 
-@keyframes hideRight {
+@keyframes hide-right {
   from {
     right: 0; }
   to {
     right: -80vw;
     visibility: hidden; } }
 
-@keyframes fadeInFactBox {
+@keyframes fade-in-fact-box {
   from {
     background-color: rgba(255, 255, 255, 0);
     box-shadow: none; }
   to {
     background-color: white; } }
 
-@keyframes changeColor {
+@keyframes change-color {
   from {
     color: #000; }
   to {
     color: #fff; } }
 
-@keyframes moveUp {
+@keyframes move-up {
   from {
     top: 50%; }
   to {
     top: 10%; } }
 
-@keyframes factNumberShow {
+@keyframes fade-in-fact-number {
   0% {
     visibility: hidden; }
   1% {
     visibility: visible;
-    font-size: scale(2);
+    transform: scale(2);
     opacity: 0.4; }
   10% {
-    font-size: scale(2.1);
+    transform: scale(2.1);
     opacity: 0.6; }
   100% {
-    font-size: scale(1);
+    transform: scale(1);
     opacity: 1; } }
 
-@keyframes fadeIn {
+@keyframes fade-in {
   0% {
     visibility: hidden; }
   1% {
@@ -68,86 +83,38 @@ body {
   100% {
     opacity: 1; } }
 
-@keyframes resizeHeader {
+@keyframes resize-header {
   to {
     height: 85vh; } }
 
-.introTitle {
+.intro-title {
   position: relative;
   top: 15%;
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 300;
-  animation: fadeIn 1s backwards 1s ease-in-out; }
-  @media (max-width: 1400px) {
-    .introTitle {
-      font-size: 35px; } }
-  @media (max-width: 1100px) {
-    .introTitle {
-      font-size: 32px; } }
-  @media (max-height: 580px) {
-    .introTitle {
-      font-size: 22px; } }
+  animation: fade-in 1s backwards 1s ease-in-out; }
 
-.introSubTitle {
+.intro-subtitle {
   font-weight: 250;
-  font-size: 30px;
-  animation: fadeIn 1s backwards 0.5s ease-in-out; }
-  @media (max-width: 1400px) {
-    .introSubTitle {
-      font-size: 25px; } }
-  @media (max-width: 1100px) {
-    .introSubTitle {
-      font-size: 22px; } }
+  font-size: 2rem;
+  animation: fade-in 1s backwards 0.5s ease-in-out; }
 
 .pa-logo {
-  height: 300px; }
-  @media (max-width: 1000px) {
-    .pa-logo {
-      height: 250px; } }
-  @media (max-height: 580px) {
-    .pa-logo {
-      height: 150px; } }
+  height: 18.75rem; }
 
 .ms-logo {
-  height: 22px;
-  width: 22px; }
+  height: 1.8rem;
+  width: 1.8rem; }
 
 .footer-logo {
-  height: 150px; }
-  @media (max-width: 580px) {
-    .footer-logo {
-      height: 100px; } }
+  height: 10rem; }
 
 .header-facts h1 {
-  font-size: 100px;
+  font-size: 4.5rem;
   color: #e21c1cda; }
-  @media (max-width: 1400px) {
-    .header-facts h1 {
-      font-size: 80px; } }
-  @media (max-width: 1100px) {
-    .header-facts h1 {
-      font-size: 65px; } }
-  @media (max-width: 860px) {
-    .header-facts h1 {
-      font-size: 45px; } }
-  @media (max-width: 580px) {
-    .header-facts h1 {
-      font-size: 35px; } }
 
 .header-facts p {
-  font-size: 30px; }
-  @media (max-width: 1400px) {
-    .header-facts p {
-      font-size: 25px; } }
-  @media (max-width: 1100px) {
-    .header-facts p {
-      font-size: 22px; } }
-  @media (max-width: 860px) {
-    .header-facts p {
-      font-size: 20px; } }
-  @media (max-width: 580px) {
-    .header-facts p {
-      font-size: 18px; } }
+  font-size: 2rem; }
 
 .blue-bg {
   color: #fff;
@@ -169,40 +136,28 @@ body {
       margin-bottom: 15px; } }
 
 .video {
-  padding: 70px;
+  padding: 4.5rem;
   display: flex;
   justify-content: center;
   align-items: center; }
   .video-frame {
     width: 60vw;
-    height: 500px;
-    padding: 20px;
+    height: 32rem;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     padding: 5px; }
-    @media (max-width: 860px) {
-      .video-frame {
-        padding: 15px;
-        margin-bottom: 20px; } }
-    @media (max-width: 580px) {
-      .video-frame {
-        padding: 10px;
-        margin-bottom: 10px; } }
     @media (max-width: 1000px) {
       .video-frame {
-        width: 80vw;
-        height: 450px; } }
-    @media (max-width: 860px) {
-      .video-frame {
-        width: 90vw;
-        height: 450px; } }
+        width: 90vw; } }
 
 html, body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  animation: 0.1s unlockScroll forwards 4s; }
+  animation: 0.1s unlock-scroll forwards 4s; }
 
 .flex {
   display: flex;
@@ -221,7 +176,7 @@ html, body {
     z-index: 3;
     transition: cubic-bezier(1, 0, 0, 1);
     left: 0;
-    animation: hideLeft 2s forwards 2s; }
+    animation: hide-left 2s forwards 2s; }
     .landing-left h1 {
       position: relative;
       width: fit-content;
@@ -234,7 +189,7 @@ html, body {
     z-index: 3;
     transition: cubic-bezier(1, 0, 0, 1);
     right: 0;
-    animation: hideRight 2s forwards 2s; }
+    animation: hide-right 2s forwards 2s; }
     .landing-right h1 {
       left: 0; }
   .landing-logo-left {
@@ -255,119 +210,69 @@ html, body {
   width: 100vw;
   text-align: center;
   background-color: #b7c0c5;
-  animation: resizeHeader 1s forwards 8s; }
+  animation: resize-header 1s forwards 8s; }
   .header-slogan-one {
     position: relative;
-    font-size: 50px;
+    padding: 0 1rem;
+    font-size: 2.8rem;
     color: #fff;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: changeColor 2s forwards 2s, moveUp 1s forwards 4s; }
-    @media (max-width: 1400px) {
-      .header-slogan-one {
-        font-size: 40px; } }
-    @media (max-width: 1100px) {
-      .header-slogan-one {
-        font-size: 35px; } }
-    @media (max-width: 860px) {
-      .header-slogan-one {
-        font-size: 30px; } }
-    @media (max-width: 580px) {
-      .header-slogan-one {
-        font-size: 25px; } }
+    animation: change-color 2s forwards 2s, move-up 1s forwards 4s; }
   .header-slogan-two {
     color: #fff;
     grid-column-start: 1;
     grid-column-end: 4;
     align-self: start;
-    font-size: 30px;
-    animation: fadeIn 1s backwards 7s; }
-    @media (max-width: 1400px) {
-      .header-slogan-two {
-        font-size: 25px; } }
-    @media (max-width: 1100px) {
-      .header-slogan-two {
-        font-size: 22px; } }
-    @media (max-width: 860px) {
-      .header-slogan-two {
-        font-size: 20px; } }
-    @media (max-width: 580px) {
-      .header-slogan-two {
-        font-size: 18px; } }
+    font-size: 2rem;
+    animation: fade-in 1s backwards 7s; }
   .header-facts {
     position: relative;
     top: 30%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 5vw 10vw;
+    gap: 5vw 5vw;
     grid-template-rows: auto auto;
     padding: 5vw; }
-    @media (max-width: 860px) {
-      .header-facts {
-        display: block;
-        top: 20%; } }
     @media (max-width: 580px) {
       .header-facts {
-        top: 15%; } }
-    @media (max-width: 320px) {
-      .header-facts {
-        top: 30px; } }
+        display: block;
+        top: 3.5rem; } }
     .header-facts-one {
-      padding: 20px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
       border-radius: 10px;
       background-color: #fff;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-      animation: fadeInFactBox 1s backwards ease-in-out 6s; }
-      @media (max-width: 860px) {
-        .header-facts-one {
-          padding: 15px;
-          margin-bottom: 20px; } }
-      @media (max-width: 580px) {
-        .header-facts-one {
-          padding: 10px;
-          margin-bottom: 10px; } }
+      animation: fade-in-fact-box 1s backwards ease-in-out 6s; }
       .header-facts-one-number {
-        animation: factNumberShow 1s backwards ease-in-out 4.5s; }
+        animation: fade-in-fact-number 1s backwards ease-in-out 4.5s; }
       .header-facts-one-text {
-        animation: fadeIn 1s backwards ease-in-out 5.5s; }
+        animation: fade-in 1s backwards ease-in-out 5.5s; }
     .header-facts-two {
-      padding: 20px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
       border-radius: 10px;
       background-color: #fff;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-      animation: fadeInFactBox 1s backwards ease-in-out 6.5s; }
-      @media (max-width: 860px) {
-        .header-facts-two {
-          padding: 15px;
-          margin-bottom: 20px; } }
-      @media (max-width: 580px) {
-        .header-facts-two {
-          padding: 10px;
-          margin-bottom: 10px; } }
+      animation: fade-in-fact-box 1s backwards ease-in-out 6.5s; }
       .header-facts-two-number {
-        animation: factNumberShow 1s backwards ease-in-out 5s; }
+        animation: fade-in-fact-number 1s backwards ease-in-out 5s; }
       .header-facts-two-text {
-        animation: fadeIn 1s backwards ease-in-out 6s; }
+        animation: fade-in 1s backwards ease-in-out 6s; }
     .header-facts-three {
-      padding: 20px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
       border-radius: 10px;
       background-color: #fff;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-      animation: fadeInFactBox 1s backwards ease-in-out 7s; }
-      @media (max-width: 860px) {
-        .header-facts-three {
-          padding: 15px;
-          margin-bottom: 20px; } }
-      @media (max-width: 580px) {
-        .header-facts-three {
-          padding: 10px;
-          margin-bottom: 10px; } }
+      animation: fade-in-fact-box 1s backwards ease-in-out 7s; }
       .header-facts-three-number {
-        animation: factNumberShow 1s backwards ease-in-out 5.5s; }
+        animation: fade-in-fact-number 1s backwards ease-in-out 5.5s; }
       .header-facts-three-text {
-        animation: fadeIn 1s backwards ease-in-out 6.5s; }
+        animation: fade-in 1s backwards ease-in-out 6.5s; }
 
 .main-section-one {
   background-attachment: fixed;
@@ -408,88 +313,25 @@ html, body {
   color: #000; }
 
 .main-scroll {
-  padding: 4vh 10vw;
+  padding: 2rem 5rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; }
   @media (max-width: 950px) {
     .main-scroll {
-      padding: 20px 10px; } }
-  @media (max-width: 580px) {
-    .main-scroll {
-      padding: 10px 10px; } }
+      padding: 1.8rem 1rem; } }
   .main-scroll-title {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 50px;
-    padding: 20px 30px; }
-    @media (max-width: 1400px) {
-      .main-scroll-title {
-        font-size: 40px; } }
-    @media (max-width: 1100px) {
-      .main-scroll-title {
-        font-size: 35px; } }
-    @media (max-width: 860px) {
-      .main-scroll-title {
-        font-size: 30px; } }
-    @media (max-width: 680px) {
-      .main-scroll-title {
-        font-size: 25px;
-        padding: 15px 20px; } }
+    font-size: 3rem;
+    padding: 1.25rem 2rem; }
     .main-scroll-title-sub {
-      font-size: 30px;
+      font-size: 1.7rem;
       padding-bottom: 10px; }
-      @media (max-width: 1400px) {
-        .main-scroll-title-sub {
-          font-size: 25px; } }
-      @media (max-width: 1100px) {
-        .main-scroll-title-sub {
-          font-size: 22px; } }
-      @media (max-width: 860px) {
-        .main-scroll-title-sub {
-          font-size: 20px; } }
-      @media (max-width: 580px) {
-        .main-scroll-title-sub {
-          font-size: 17px; } }
   .main-scroll-paragraph {
-    font-size: 25px; }
-    @media (max-width: 1400px) {
-      .main-scroll-paragraph {
-        font-size: 20px; } }
-    @media (max-width: 1100px) {
-      .main-scroll-paragraph {
-        font-size: 18px; } }
-    @media (max-width: 860px) {
-      .main-scroll-paragraph {
-        font-size: 16px; } }
-    @media (max-width: 580px) {
-      .main-scroll-paragraph {
-        font-size: 14px; } }
+    font-size: 1.5rem; }
     .main-scroll-paragraph-sm {
-      font-size: 20px; }
-      @media (max-width: 1400px) {
-        .main-scroll-paragraph-sm {
-          font-size: 18px; } }
-      @media (max-width: 1100px) {
-        .main-scroll-paragraph-sm {
-          font-size: 16px; } }
-      @media (max-width: 860px) {
-        .main-scroll-paragraph-sm {
-          font-size: 14px; } }
-      @media (max-width: 580px) {
-        .main-scroll-paragraph-sm {
-          font-size: 12px; } }
+      font-size: 1.25rem; }
   .main-scroll-image {
-    height: 400px;
-    width: 450px;
-    transition: 0.5s ease-in-out; }
-    .main-scroll-image:hover {
-      transform: scale(1.4); }
-    @media (max-width: 1400px) {
-      .main-scroll-image {
-        height: 350px;
-        width: 400px; } }
-    @media (max-width: 950px) {
-      .main-scroll-image {
-        height: 300px;
-        width: 350px; } }
+    height: 25rem;
+    width: 28rem; }
     @media (max-width: 680px) {
       .main-scroll-image {
         width: 100%;
@@ -498,7 +340,7 @@ html, body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 5vw 10vw;
+    gap: 5vw 5vw;
     padding: 2vw; }
     @media (max-width: 580px) {
       .main-scroll-grid {
@@ -519,11 +361,8 @@ html, body {
     padding-top: 30px;
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 3.125rem;
     flex-wrap: wrap; }
-    @media (max-width: 1100px) {
-      .main-scroll-flex {
-        gap: 40px; } }
     @media (max-width: 680px) {
       .main-scroll-flex {
         gap: 15px; } }
