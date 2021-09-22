@@ -49,17 +49,28 @@
     @include grid(2,2);
     gap: 0;
     &-left {
-        justify-self: end;
-        %img-part-position {
-            width: 70%;
-            height: auto;
+        &-upper{
+            justify-self: end;
+        }
+        &-lower {
+            justify-self: end;
             margin-top: -1px;
         }
     }
     &-right {
-        justify-self: start;
-        @extend %img-part-position;
-        margin-left: -1px;
+        &-upper {
+            justify-self: start;
+            margin-left: -1px;
+        }
+        &-lower {
+            justify-self: start;
+            margin-top: -1px;
+            margin-left: -1px;
+        }
+    }
+    & img {
+        width: 70%; 
+        height: auto;
     }
 }
 

@@ -131,15 +131,21 @@ body {
   grid-template-rows: repeat(2, 1fr);
   gap: 5vw 5vw;
   gap: 0; }
-  .anim-image-left {
+  .anim-image-left-upper {
     justify-self: end; }
-    .anim-image-left .anim-image-right {
-      width: 70%;
-      height: auto;
-      margin-top: -1px; }
-  .anim-image-right {
+  .anim-image-left-lower {
+    justify-self: end;
+    margin-top: -1px; }
+  .anim-image-right-upper {
     justify-self: start;
     margin-left: -1px; }
+  .anim-image-right-lower {
+    justify-self: start;
+    margin-top: -1px;
+    margin-left: -1px; }
+  .anim-image img {
+    width: 70%;
+    height: auto; }
 
 .benefit-box {
   width: 20vw;
