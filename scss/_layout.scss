@@ -129,14 +129,14 @@ html, body {
     &-section {
         &-one {
             @include main-image-bg;
-            background-image: url("../Images/pa3.jpg");
+            background-image: url("../Images/app_building.jpg");
             @media (max-width: 950px) {
-                background-image: url("../Images/example1.png");
+                background-image: url("../Images/app_building2.png");
             }
         }
         &-two {
             @include main-image-bg;
-            background-image: url("../Images/pa2.png");
+            background-image: url("../Images/example1.png");
             @media (max-width: 950px) {
                 background-image: url("../Images/example2.png");
             }

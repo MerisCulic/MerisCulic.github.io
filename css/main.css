@@ -124,6 +124,23 @@ body {
   color: #000;
   background-color: #b7c0c5; }
 
+.anim-image {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5vw 5vw;
+  gap: 0; }
+  .anim-image-left {
+    justify-self: end; }
+    .anim-image-left .anim-image-right {
+      width: 70%;
+      height: auto;
+      margin-top: -1px; }
+  .anim-image-right {
+    justify-self: start;
+    margin-left: -1px; }
+
 .benefit-box {
   width: 20vw;
   background-color: #fff;
@@ -283,13 +300,13 @@ html, body {
   width: 100vw;
   text-align: center;
   display: table;
-  background-image: url("../Images/pa3.jpg"); }
+  background-image: url("../Images/app_building.jpg"); }
   @media (max-width: 950px) {
     .main-section-one {
       background-size: contain; } }
   @media (max-width: 950px) {
     .main-section-one {
-      background-image: url("../Images/example1.png"); } }
+      background-image: url("../Images/app_building2.png"); } }
 
 .main-section-two {
   background-attachment: fixed;
@@ -300,7 +317,7 @@ html, body {
   width: 100vw;
   text-align: center;
   display: table;
-  background-image: url("../Images/pa2.png"); }
+  background-image: url("../Images/example1.png"); }
   @media (max-width: 950px) {
     .main-section-two {
       background-size: contain; } }

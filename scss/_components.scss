@@ -44,6 +44,25 @@
     background-color: $color-light-gray;
 }
 
+.anim-image {
+    padding-top: 2rem;
+    @include grid(2,2);
+    gap: 0;
+    &-left {
+        justify-self: end;
+        %img-part-position {
+            width: 70%;
+            height: auto;
+            margin-top: -1px;
+        }
+    }
+    &-right {
+        justify-self: start;
+        @extend %img-part-position;
+        margin-left: -1px;
+    }
+}
+
 .benefit-box {
     width: 20vw;
     background-color: $color-white;
